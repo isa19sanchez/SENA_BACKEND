@@ -1,0 +1,362 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: My first collection
+meta:
+  id: wrk_53aaeec8c43549769634c548b7d46132
+  created: 1763730691007
+  modified: 1763730691007
+  description: ""
+collection:
+  - url: http://localhost:8080/api/conductor/list
+    name: GetConductores
+    meta:
+      id: req_31814e36f6ee48fcac564f33b2286f75
+      created: 1763760710090
+      modified: 1764354201227
+      isPrivate: false
+      description: ""
+      sortKey: -1763760710090
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/conductor/register
+    name: RegistrarConductores
+    meta:
+      id: req_5bafa24b487c48e59edb0d7a514bfa0f
+      created: 1763785622709
+      modified: 1764362867231
+      isPrivate: false
+      description: ""
+      sortKey: -1763785622709
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "conductorName": "Pablo Domingez",
+          "idLicencia": "LIC-38681",
+          "idTelefono": "3009873467",
+          "idDireccion": "Carrera 34 # 21-30",
+          "idActivo": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/vehiculo/update/4
+    name: ActualizarVehiculos
+    meta:
+      id: req_4852b3cb3e134a7c8fb4b99d93d5421d
+      created: 1763787561815
+      modified: 1764355071955
+      isPrivate: false
+      description: ""
+      sortKey: -1763787561815
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "placaVehiculo": "ABC-890",
+          "marcaVehiculo": "Toyota",
+          "modeloVehiculo": "Corolla",
+          "vehiculoYear": 2022,
+          "colorVehiculo": "Verde"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/vehiculo/delete/2
+    name: EliminarVehiculos
+    meta:
+      id: req_90afe59182e64cedbe1c156fd0ec5d1b
+      created: 1763788131353
+      modified: 1764353431670
+      isPrivate: false
+      description: ""
+      sortKey: -1763788131353
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/vehiculo/register
+    name: RegistrarVehiculos
+    meta:
+      id: req_221c577e75454c4da93d55946eb56234
+      created: 1764185640895
+      modified: 1764353397615
+      isPrivate: false
+      description: ""
+      sortKey: -1764185640895
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+        		"placaVehiculo": "ABC-123",
+        		"marcaVehiculo": "Honda",
+        		"modeloVehiculo": "Civic",
+        		"vehiculoYear": 2021,
+        		"colorVehiculo": "Gris",
+        		"conductor": null,
+        		"seguro": []
+        	}
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/vehiculo/list
+    name: GetVehiculos
+    meta:
+      id: req_bc42647b2e3c4df48561c5ee682a8fde
+      created: 1764185674554
+      modified: 1764353382514
+      isPrivate: false
+      description: ""
+      sortKey: -1764185674554
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/conductor/update/1
+    name: ActualizarConductor
+    meta:
+      id: req_df10b763fc1b451f80c90f55674b6a3d
+      created: 1764354989011
+      modified: 1764356699532
+      isPrivate: false
+      description: ""
+      sortKey: -1764354989011
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "conductorName": "Juan Lopez",
+          "idLicencia": "LIC-90090",
+          "idTelefono": "3001234567",
+          "idDireccion": "Calle 10 # 12-34",
+          "idActivo": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/conductor/delete/4
+    name: EliminarConductor
+    meta:
+      id: req_a703c25931b14a80843bbc4520cac30e
+      created: 1764358056477
+      modified: 1764358175875
+      isPrivate: false
+      description: ""
+      sortKey: -1764358056477
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/seguro/list
+    name: GetSeguro
+    meta:
+      id: req_f7ee282b48424b808e7baaa51b63c617
+      created: 1764360969918
+      modified: 1764363522832
+      isPrivate: false
+      description: ""
+      sortKey: -1764360969918
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/seguro/register
+    name: RegistrarSeguro
+    meta:
+      id: req_003430d7b4394bf1bd97fa4a6f38ac0e
+      created: 1764360988227
+      modified: 1764363921072
+      isPrivate: false
+      description: ""
+      sortKey: -1764360988227
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "compania": "SOAT",
+          "numeroPoliza": "POL-12345678",
+          "fechaInicio": "2022-06-08",
+          "fechaVencimiento": "2023-06-08"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/seguro/update/1
+    name: ActualizarSeguro
+    meta:
+      id: req_bb0462b080d3490e9c3a68de3aecd18f
+      created: 1764361019165
+      modified: 1764364127037
+      isPrivate: false
+      description: ""
+      sortKey: -1764361019165
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "compania": "Allianz",
+          "numeroPoliza": "POL-99988",
+          "fechaInicio": "2024-05-10",
+          "fechaVencimiento": "2025-05-10"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/seguro/delete/2
+    name: EliminarSeguro
+    meta:
+      id: req_b328b241a4204f3da8f44d78d6327044
+      created: 1764361039092
+      modified: 1764364348954
+      isPrivate: false
+      description: ""
+      sortKey: -1764361039092
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_df51eb3c3ccc6925362d7f98a8cf3e89b119c675
+    created: 1763730691027
+    modified: 1763730691027
+environments:
+  name: Base Environment
+  meta:
+    id: env_df51eb3c3ccc6925362d7f98a8cf3e89b119c675
+    created: 1763730691017
+    modified: 1763730691017
+    isPrivate: false
