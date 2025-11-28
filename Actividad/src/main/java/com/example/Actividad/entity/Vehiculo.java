@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -30,4 +32,13 @@ public class Vehiculo {
 
     @Column(name = "colorVehiculo", nullable = false, length = 100)
     private String colorVehiculo;
+
+    @OneToOne
+    @JoinColumn(name = "id_conductor", unique = true)
+    private Conductor conductor;
+
+
+    @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL)
+    private List<Seguro> seguros;
+
 }
